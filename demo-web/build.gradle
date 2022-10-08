@@ -1,0 +1,17 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id 'java'
+}
+
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'io.netty:netty-tcnative-boringssl-static:2.0.54.Final'
+	implementation group: 'io.netty', name: 'netty-resolver-dns-native-macos', version: '4.1.82.Final', classifier: 'osx-aarch_64'
+}
